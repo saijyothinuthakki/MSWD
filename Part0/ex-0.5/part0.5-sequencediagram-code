@@ -1,1 +1,22 @@
+note over browser:
+User opens the singlepage app in the browser and click on notes.
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
 
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: main.js
+
+note over browser:
+browser requests json code from server 
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{ content: "HTML is easy", date: "2021-05-26" }, ...]
+
+note over browser:
+The single page appilcation renders a single page from the server,
+contents can be modified using JavaScript
+end note
