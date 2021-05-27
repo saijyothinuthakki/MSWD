@@ -21,9 +21,5 @@ browser requests json code from server
 end note
 
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
-server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+server-->browser: [{ content: "Part0.4 ", date: "2021-05-26" }, ...]
 
-note over browser:
-browser executes the event handler
-that renders notes to display
-end note
