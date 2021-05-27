@@ -1,0 +1,31 @@
+note over browser:
+User opens the singlepage app in the browser and input data in the textbox 
+and clicks on save
+end note
+browser->server:HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over server:
+The  header of Content-Type request tells the server, 
+that the included data is represented in the JSON format.
+end note
+server-->browser:HTTP status code 201
+
+note over browser:
+This time the server does not ask for a redirect, 
+the browser stays on the same page.
+end note
+
+note right of browser:
+No further HTTP requests
+end note
+
+note left of server:
+The command document.getElementById('notes_form') instructs the code to 
+fetch the form-element from the page, 
+and to register an event handler
+end note
+
+
+note over browser:
+Now,here the event handler creates a new note, 
+adds it to the already existing notes list with the command notes.push(note)
+end note
