@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const Statistics = ({good ,bad,neutral ,total ,Average,positive}) => {
-    if(total===0 & good===0 & bad===0 &neutral===0)
+    if(total===0)
     { return(
       <h3>There is no Feedback</h3>
     )
