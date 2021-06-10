@@ -4,13 +4,9 @@ import FindCountry from './components/SearchCountry';
 import CountryList from './components/CountryList';
 
 const App = () => {
-  // List of all countries
+  
   const [countries, setCountries] = useState([]);
-
-  // Country to be found
   const [country, setCountry] = useState('');
-
-  // Fetch countries from API
   useEffect(() => {
     axios
       .get('https://restcountries.eu/rest/v2/all')
