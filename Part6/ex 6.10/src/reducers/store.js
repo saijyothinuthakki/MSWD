@@ -21,4 +21,6 @@ const asObject = (anecdote) => {
 
 const initialState = anecdotesAtStart.map(asObject)
 
-export default { initialState }
+const notification = "Default Message"
+
+export default { initialState, notification }

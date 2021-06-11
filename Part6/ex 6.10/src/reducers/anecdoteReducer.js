@@ -1,4 +1,5 @@
 import initialState from './store'
+import notification from './store'
 
 const getId = () => {
   return (100000 * Math.random()).toFixed(0)
